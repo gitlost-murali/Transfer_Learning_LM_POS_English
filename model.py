@@ -221,6 +221,7 @@ def get_prediction(x):
 
 def predict(m, dl):
 	preda,_ = predict_with_targs_(m, dl)
+	print(preda)
 	return to_np(torch.cat(preda))
 
 def predict_batch(m, x):
@@ -232,6 +233,7 @@ def predict_with_targs_(m, dl):
 	m.eval()
 	if hasattr(m, 'reset'): m.reset()
 	res = []
+	print(type(dl))
 	for *x,y in iter(dl): res.append([get_prediction(m(*VV(x))),y])
 	return zip(*res)
 
