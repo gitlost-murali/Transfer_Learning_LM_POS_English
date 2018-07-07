@@ -6,3 +6,5 @@ Input data must be in the following format
             Sentence 1                    Sentence2
 [[[w1,w2,w3,w4],[tag1,tag2,tag3,tag4]],[[w3,w6,w7,w4],[tag3,tag6,tag7,tag4]] ]
 
+Used two dense layers at the end of AWD LSTM for POS tagging
+
